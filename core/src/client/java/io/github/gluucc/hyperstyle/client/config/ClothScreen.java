@@ -82,6 +82,15 @@ public class ClothScreen {
                 .setSaveConsumer(v -> ModConfig.INSTANCE.hudSwayCatchupDelay = v / 100f)
                 .build());
 
+        general.addEntry(eb.startIntSlider(
+                        Text.translatable("option.hyperstyle.hud_rank_intensity"),
+                        Math.round(ModConfig.INSTANCE.hudRankShakeIntensity * 10), 0, 300)
+                .setDefaultValue(100)
+                .setTextGetter(v -> Text.literal(v + "%"))
+                .setTooltip(Text.translatable("option.hyperstyle.hud_rank_intensity.tooltip"))
+                .setSaveConsumer(v -> ModConfig.INSTANCE.hudRankShakeIntensity = v / 10f)
+                .build());
+
         return builder.build();
     }
 }

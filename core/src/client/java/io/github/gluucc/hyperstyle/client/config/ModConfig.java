@@ -25,6 +25,8 @@ public class ModConfig {
     public float hudSwayIntensity = 0.5f;
     public float hudSwayCatchupDelay = 0.5f;
 
+    public float hudRankShakeIntensity = 10.0f;
+
     public static void load() {
         try {
             if(Files.exists(PATH)) {

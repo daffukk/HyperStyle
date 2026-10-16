@@ -176,7 +176,7 @@ public class StyleHud {
         rankMatrices.push();
 
         if (StyleMeter.getRankShakeTicks() > 0) {
-            HudRenderUtil.applyHudShakeSin(rankMatrices, tickDelta, 10.0f);
+            HudRenderUtil.applyHudShakeSin(rankMatrices, tickDelta, ModConfig.INSTANCE.hudRankShakeIntensity);
         }
 
         context.drawTexture(currentRank.getTexture(), rankX, rankY, 0, 0, currentRankWidth, currentRankHeight, currentRankWidth, currentRankHeight);
